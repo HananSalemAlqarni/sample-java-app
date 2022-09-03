@@ -8,9 +8,9 @@ pipeline {
 
         AWS_S3_BUCKET = "deploy-maven"
         ARTIFACT_NAME = "my-app-1.0-SNAPSHOT.jar"
-        AWS_EB_APP_NAME = "docker"
+        AWS_EB_APP_NAME = "tomcat-to"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Docker-env"
+        AWS_EB_ENVIRONMENT = "Tomcatto-env"
 
 
     }
