@@ -6,11 +6,11 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 
-        AWS_S3_BUCKET = "tomcat-to"
+        AWS_S3_BUCKET = "deploy-maven"
         ARTIFACT_NAME = "hello-world.war"
-        AWS_EB_APP_NAME = "selu2-webapp1"
+        AWS_EB_APP_NAME = "docker"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Selu2webapp1-env"
+        AWS_EB_ENVIRONMENT = "Docker-env"
 
 
     }
