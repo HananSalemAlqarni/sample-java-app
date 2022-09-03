@@ -7,7 +7,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 
         AWS_S3_BUCKET = "deploy-maven"
-        ARTIFACT_NAME = "hello-world.war"
+        ARTIFACT_NAME = "my-app-1.0-SNAPSHOT.jar"
         AWS_EB_APP_NAME = "docker"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
         AWS_EB_ENVIRONMENT = "Docker-env"
@@ -57,7 +57,7 @@ pipeline {
 
             post {
                 success {
-                    archiveArtifacts artifacts: '**/target/**.war', followSymlinks: false
+                    archiveArtifacts artifacts: '**/target/**.jar', followSymlinks: false
 
                    
                 }
